@@ -14,7 +14,6 @@
 
 html {
     overflow-x: hidden;
-    width: 100vw;
     max-width: 100%;
     font-display: swap;
     -webkit-text-size-adjust: 100%;
@@ -72,7 +71,7 @@ nav ul li {
 
 nav ul li:hover {
     background: rgba(255, 215, 0, 0.3);
-    transform: scale(1.1);
+    transform: scale(1.05); /* Gentler scaling effect */
 }
 
 nav ul li a {
@@ -94,13 +93,13 @@ section {
 }
 
 .container {
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transition: opacity var(--transition-speed) ease-in-out;
 }
 
 .container.active {
-    display: block;
+    visibility: visible;
     opacity: 1;
 }
 
@@ -120,8 +119,8 @@ section {
     border-radius: 8px;
     margin: 10px 0;
     border: 1px solid rgba(255, 215, 0, 0.3);
-    display: block; /* Change from none to block */
-    opacity: 1; /* Ensure visibility */
+    display: block;
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
